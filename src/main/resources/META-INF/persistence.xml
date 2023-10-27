@@ -28,6 +28,8 @@
             <property name="hibernate.connection.pool_size"
                       value="10"/>
 
+            <property name="hibernate.connection.verifyServerCertificate" value="false" />
+            <property name="hibernate.connection.useSSL" value="true" />
             <!-- Automatic schema export -->
             <property name="jakarta.persistence.schema-generation.database.action"
                       value="drop-and-create"/>
