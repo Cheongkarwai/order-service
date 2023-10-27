@@ -15,7 +15,7 @@
 
             <!-- PostgreSQL -->
             <property name="jakarta.persistence.jdbc.url"
-                      value="jdbc:postgresql://dpg-cktivfunfb1c73dmq0fg-a.singapore-postgres.render.com/clinic_xaqo?enabledTLSProtocols=TLSv1.2"/>
+                      value="jdbc:postgresql://dpg-cktivfunfb1c73dmq0fg-a/clinic_xaqo"/>
 
             <!-- Credentials -->
             <property name="jakarta.persistence.jdbc.user"
@@ -28,8 +28,6 @@
             <property name="hibernate.connection.pool_size"
                       value="10"/>
 
-            <property name="hibernate.connection.verifyServerCertificate" value="false" />
-            <property name="hibernate.connection.useSSL" value="true" />
             <!-- Automatic schema export -->
             <property name="jakarta.persistence.schema-generation.database.action"
                       value="drop-and-create"/>
