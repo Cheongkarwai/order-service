@@ -1,0 +1,21 @@
+spring:
+  cloud:
+    function:
+      definition: orderEvent
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+      bindings:
+        #IN meaning that this is an input channel that will receive data from the output channel and send it to the order-event topic as the final destination.
+         orderEvent-in-0:
+           destination: order-event
+         input.destination: order-event
+#         output.destination: order-event
+#         orderEvent-out-0:
+#           destination: order-event
+
+
+
+
+

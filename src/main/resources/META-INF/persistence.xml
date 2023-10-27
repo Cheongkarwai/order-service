@@ -1,0 +1,40 @@
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+    <persistence-unit name="postgres">
+        <provider>org.hibernate.reactive.provider.ReactivePersistenceProvider</provider>
+
+        <!--Classes-->
+        <class>com.cheong.domain.billing.Payment</class>
+        <class>com.cheong.domain.billing.Payer</class>
+        <class>com.cheong.domain.order.Order</class>
+        <class>com.cheong.domain.order.OrderItem</class>
+
+        <properties>
+
+            <!-- PostgreSQL -->
+            <property name="jakarta.persistence.jdbc.url"
+                      value="jdbc:postgresql://dpg-cktivfunfb1c73dmq0fg-a.singapore-postgres.render.com/clinic_xaqo?enabledTLSProtocols=TLSv1.2"/>
+
+            <!-- Credentials -->
+            <property name="jakarta.persistence.jdbc.user"
+                      value="cheong"/>
+            <property name="jakarta.persistence.jdbc.password"
+                      value="yMr1tmKBufVlwy8Ww9brPO8faxZfn2Tc"/>
+
+            <!-- The Vert.x SQL Client connection pool size -->
+            <property name="hibernate.connection.pool_size"
+                      value="10"/>
+
+            <!-- Automatic schema export -->
+            <property name="jakarta.persistence.schema-generation.database.action"
+                      value="drop-and-create"/>
+
+            <!-- SQL statement logging -->
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.highlight_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>
