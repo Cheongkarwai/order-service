@@ -23,6 +23,7 @@
             <property name="jakarta.persistence.jdbc.password"
                       value="yMr1tmKBufVlwy8Ww9brPO8faxZfn2Tc"/>
 
+
             <!-- The Vert.x SQL Client connection pool size -->
             <property name="hibernate.connection.pool_size"
                       value="10"/>
